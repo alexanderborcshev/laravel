@@ -1,0 +1,334 @@
+@charset "utf-8"
+
+@import "../pages/reset"
+
+section
+    position: relative
+
+iframe
+    display: block
+hr
+    margin: 40px 0
+    height: 1px
+    border: none !important
+    width: 100%
+    background-color: #F0F0F0
+table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+
+    td
+        vertical-align: middle
+.full
+    width: 100% !important
+strong
+    font-weight: bold
+
+img
+    max-width: 100%
+
+nav
+    ul,
+    li
+        margin: 0
+        padding: 0
+        list-style: none
+        list-style-image: none
+
+img
+    -ms-interpolation-mode: bicubic
+
+*
+    box-sizing: border-box !important
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    -webkit-appearance: none
+    &:focus
+        -moz-outline-style: none
+        outline: none !important
+
+html
+    width: 100%
+    height: 100%
+
+body
+    background: $black1
+    font-stretch: normal
+    width: 100%
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    text-align: left
+    font-family: $default-font !important
+    font-weight: 400
+    font-size: 14px
+    line-height: 1.25
+    color: $black
+    position: relative
+    overflow-y: scroll
+
+    &.noscroll
+        overflow: hidden !important
+    &.mobile-device
+        min-width: 320px
+        max-width: 320px
+main
+    width: 100%
+    position: relative
+    will-change: padding
+
+.hide
+    display: none !important
+
+.show
+    display: block !important
+//ПОЗИЦИОНИРОВАНИЕ БЛОКОВ
+
+//Верхний отступ
+.mt4
+    margin-top: 4px !important
+.mt8
+    margin-top: 8px !important
+.mt10
+    margin-top: 10px !important
+.mt12
+    margin-top: 12px !important
+.mt16
+    margin-top: 16px !important
+.mt20
+    margin-top: 20px !important
+.mt24
+    margin-top: 24px !important
+.mt28
+    margin-top: 28px !important
+.mt32
+    margin-top: 32px !important
+.mt40
+    margin-top: 40px !important
+.mt48
+    margin-top: 48px !important
+.mt56
+    margin-top: 56px !important
+.mt64
+    margin-top: 64px !important
+.mt72
+    margin-top: 72px !important
+.mt80
+    margin-top: 80px !important
+
+//Нижний отступ
+.mb4
+    margin-bottom: 4px !important
+.mb8
+    margin-bottom: 8px !important
+.mb12
+    margin-bottom: 12px !important
+.mb16
+    margin-bottom: 16px !important
+.mb20
+    margin-bottom: 20px !important
+.mb24
+    margin-bottom: 24px !important
+.mb32
+    margin-bottom: 32px !important
+.mb40
+    margin-bottom: 40px !important
+.mb48
+    margin-bottom: 48px !important
+.mb56
+    margin-bottom: 56px !important
+.mb64
+    margin-bottom: 64px !important
+.mb72
+    margin-bottom: 72px !important
+.mb80
+    margin-bottom: 80px !important
+
+//Правый отступ
+.mr2
+    margin-right: 2px !important
+.mr4
+    margin-right: 4px !important
+.mr6
+    margin-right: 6px !important
+.mr8
+    margin-right: 8px !important
+.mr12
+    margin-right: 12px !important
+.mr16
+    margin-right: 16px !important
+.mr20
+    margin-right: 20px !important
+.mr24
+    margin-right: 24px !important
+.mr32
+    margin-right: 32px !important
+.mr40
+    margin-right: 40px !important
+.mr48
+    margin-right: 48px !important
+.mr56
+    margin-right: 56px !important
+.mr64
+    margin-right: 64px !important
+.mr72
+    margin-right: 72px !important
+.mr80
+    margin-right: 80px !important
+
+//Левый отступ
+.ml4
+    margin-left: 4px !important
+.ml8
+    margin-left: 8px !important
+.ml12
+    margin-left: 12px !important
+.ml16
+    margin-left: 16px !important
+.ml20
+    margin-left: 20px !important
+.ml24
+    margin-left: 24px !important
+.ml32
+    margin-left: 32px !important
+.ml40
+    margin-left: 40px !important
+.ml48
+    margin-left: 48px !important
+.ml56
+    margin-left: 56px !important
+.ml64
+    margin-left: 64px !important
+.ml72
+    margin-left: 72px !important
+.ml80
+    margin-left: 80px !important
+
+
+//фикс. ширина блока
+.elem-pos-fix
+    flex: 0 1 auto
+
+
+//заполнение свободной ширины
+.elem-pos-fit
+    flex: 1 1 0
+.elem-pos-top
+    align-self: flex-start
+.elem-pos-vcenter
+    align-items: center
+.elem-pos-bottom
+    align-self: flex-end
+.elem-pos-center
+    justify-content: center
+.elem-pos-left
+    justify-content: flex-start
+.elem-pos-right
+    justify-content: flex-end
+
+// ************************
+
+.df
+    display: flex !important
+    align-items: center !important
+    &-space-between
+        justify-content: space-between !important
+    &-center
+        justify-content: center!important
+    &-align-flex-start
+        align-items: flex-start !important
+
+.content
+    width: 320px
+    +for-size(992)
+        width: 896px
+        margin: 0 auto
+        padding-left: 0 !important
+        padding-right: 0 !important
+    +for-size(1440)
+        width: 1344px
+    &__title
+        margin: 24px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        +for-size(992)
+            margin: 48px 0
+            flex-direction: row
+        .svg-icon
+            color: $gray-dark
+            +for-size(992)
+                margin-right: 22px
+        h2
+            font-size: 24px
+            font-weight: 700
+            text-align: center
+            line-height: 30px
+            margin-top: 8px
+            +for-size(992)
+                font-size: 48px
+                line-height: 58px
+                font-weight: 700
+                text-align: left
+                margin: 0
+.inner-wrapper
+    width: ($content-width + 64px)
+    margin: 0 auto
+    padding-left: 32px
+    padding-right: 32px
+    position: relative
+    &.--container-width
+        width: 100%
+        min-width: 1440px
+@keyframes anim-inp-error
+    0%
+        border-color: rgba($text-color, 0.08)
+    33%
+        border-color: $red
+    66%
+        border-color: rgba($text-color, 0.08)
+    100%
+        border-color: $red
+@keyframes anim-inp-opacity
+    0%
+        opacity: 0
+    33%
+        opacity: 1
+    66%
+        opacity: 0
+    100%
+        opacity: 1
+@keyframes anim-text-error
+    0%
+        color: $gray50
+    33%
+        color: $red
+    66%
+        color: $gray50
+    100%
+        color: $red
+@keyframes anim-ghost
+    0%
+        opacity: 0.5
+
+    50%
+        opacity: 1
+
+    100%
+        opacity: 0.5
+@keyframes preloader-rotate
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
+.preloader
+    animation: preloader-rotate 1.5s linear infinite
+.c-pointer
+    cursor: pointer !important
+.nowrap
+    white-space: nowrap
+.rotate
+    transform: rotate(180deg)

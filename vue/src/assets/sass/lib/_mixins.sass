@@ -1,0 +1,172 @@
+=background-gradient
+    position: relative
+    &::before
+        width: 100%
+        height: 100%
+        content: ''
+        background: linear-gradient(180deg, #373737 0%, rgba(89, 87, 35, 0) 100%)
+        z-index: 0 !important
+        display: block
+        border-radius: 12px
+        position: absolute
+        left: 0px
+        top: 0px
+    &:after
+        width: calc(100% - 2px)
+        height: calc(100% - 2px)
+        content: ''
+        background-color: $black2
+        border-radius: 12px
+        display: block
+        top: 1px
+        left: 1px
+        position: absolute
+        z-index: 1 !important
+        transition: all .15s ease
+=triangle($width, $height, $color, $direction)
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    display: block
+    z-index: 2
+    // for a better anti-aliasing in webkit browser
+    //+transform(rotate(360deg))
+
+    // Right
+    @if $direction == right
+        border-top: $height/2 solid transparent
+        border-bottom: $height/2 solid transparent
+        border-left: $width solid $color
+        border-right: none
+
+    // Left
+    @if $direction == left
+        border-top: $height/2 solid transparent
+        border-bottom: $height/2 solid transparent
+        border-right: $width solid $color
+        border-left: none
+
+    // Up
+    @if $direction == up
+        border-left: $width/2 solid transparent
+        border-right: $width/2 solid transparent
+        border-bottom: $height solid $color
+        border-top: none
+
+    // Down
+    @if $direction == down
+        border-left: $width/2 solid transparent
+        border-right: $width/2 solid transparent
+        border-top: $height solid $color
+        border-bottom: none
+
+// Keyframes
+=keyframes($name)
+    @keyframes #{$name}
+        @content
+
+// Placeholder
+=placeholder($color, $font-weight, $text-size)
+    &::-webkit-input-placeholder
+        color: $color
+        font-weight: $font-weight
+        text-overflow: ellipsis
+        font-size: $text-size
+
+    &:-moz-placeholder
+        color: $color
+        font-weight: $font-weight
+        text-overflow: ellipsis
+        opacity: 1
+        font-size: $text-size
+
+    &::-moz-placeholder
+        color: $color
+        font-weight: $font-weight
+        text-overflow: ellipsis
+        opacity: 1
+        font-size: $text-size
+
+    &:-ms-input-placeholder
+        color: $color
+        font-weight: $font-weight
+        text-overflow: ellipsis
+        font-size: $text-size
+
+// Placeholder:focus
+=placeholder-focus($color)
+    &:focus::-webkit-input-placeholder,
+    &:focus::-webkit-input-placeholder
+        color: $color
+
+    &:focus:-moz-placeholder,
+    &:focus:-moz-placeholder
+        color: $color
+
+    &:focus::-moz-placeholder,
+    &:focus::-moz-placeholder
+        color: $color
+
+    &:focus:-ms-input-placeholder,
+    &:focus:-ms-input-placeholder
+        color: $color
+
+// для удаления mt у первого и mb у последнего эл-та в блоке
+=mtb
+    & > *:first-child
+        margin-top: 0 !important
+    & > *:last-child
+        margin-bottom: 0 !important
+
+=gradient-text($to: right, $color1: #6A08B8, $color2: #2F80ED)
+    background: linear-gradient(to $to, $color1 0%,$color2 100%)
+    -webkit-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+    text-fill-color: transparent
+
+=pos-justify($direction: center)
+    display: flex
+    justify-content: space-between
+    align-items: $direction
+
+=nowrap($text-overflow: ellipsis)
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: $text-overflow
+
+// псевдо-ссылка
+=pseudo-link
+    display: inline-block
+    vertical-align: middle
+    border-bottom: 1px dotted
+    border-bottom-color: inherit
+    line-height: 0.9
+    cursor: pointer
+    white-space: nowrap
+    color: $text-color
+    text-decoration: none
+
+    &--color
+        color: $default-color
+
+    &:hover
+        color: $default-color
+        border-bottom-color: transparent
+        text-decoration: none
+
+
+=link-text-dotted
+    border-bottom: 1px dotted
+    border-bottom-color: initial
+    line-height: 1.1
+
+=triangle-dotted
+    width: 14px
+    height: 7px
+    background-size: 33px 104px
+
+=for-size($size)
+    @media only screen and (min-width: $size + 'px')
+        @content

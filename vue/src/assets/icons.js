@@ -1,0 +1,2 @@
+/* eslint-disable */
+let icons = ["arrow","cart","change","check","chevron","close","decor","door","envelope","clock","hand","electric","floor","gift","humb","info2","heart","info","light","legal","instruments","nav","plumbing","phone","marker","note-check","phone2","kitchen","preloader","tile","tg","vent","roof","walls","window","wp"]; export default icons;

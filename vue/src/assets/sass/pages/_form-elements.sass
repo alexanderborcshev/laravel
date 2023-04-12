@@ -1,0 +1,168 @@
+.btn, a.btn
+    width: auto
+    height: 40px
+    vertical-align: middle
+    padding: 0 16px
+    border: none
+    position: relative
+    transition: all $transition-duration $transition-timing-function
+    border-radius: 4px
+    background: $honey
+    box-shadow: none
+    font-family: $default-font 
+    font-size: 14px
+    font-weight: bold
+    line-height: 16px
+    letter-spacing: 0.025em
+    color: $black
+    cursor: pointer
+    text-align: center
+    text-decoration: none
+    display: flex
+    align-items: center
+    justify-content: center
+    will-change: background
+    text-transform: uppercase
+    .preloader
+        display: none
+    &--preloader
+        pointer-events: none
+        color: rgba(#A98D2A, 0.3)
+        background: $yellow40
+        .preloader
+            color: $black
+            z-index: 2
+        &:not(.has-icon)
+            .preloader
+                position: absolute
+                display: block
+        &.has-icon
+            .svg-icon
+                display: none
+            .preloader
+                display: block
+    &.disabled
+        pointer-events: none !important
+        opacity: 0.3 !important
+    &--mini
+        height: 32px
+        font-size: 12px
+        line-height: 16px
+        padding: 0 12px
+    &:hover
+        &:not([disabled])
+            background: #FDD94D
+            text-decoration: none
+
+    &:active
+        &:not([disabled])
+            background: #E5C340
+    &.--trans
+        background-color: transparent
+        border: 1px solid $accent
+        color: $accent
+        border-radius: 28px
+        &:hover
+            &:not([disabled])
+                background: $accent
+                text-decoration: none
+                color: #fff
+        &:active
+            &:not([disabled])
+                background: $accent
+    &.btn--yellow
+        background: #FFC700
+        color: $text-color
+
+        &[disabled]
+            background: #fff
+            color: $gray50
+            border: 1px solid $gray20
+
+        &:hover
+            &:not([disabled])
+                color: $text-color
+                background: #FFE481
+
+        &:active
+            &:not([disabled])
+                color: $text-color
+                background: #e6c04e
+    &.btn--green
+        background: $green
+        width: auto
+        color: #fff
+
+        &:hover
+            &:not([disabled])
+                color: #fff
+                background: $green-hover
+
+        &:active
+            &:not([disabled])
+                background: $green
+    &.btn--red
+        background: $red
+        width: auto
+        color: #fff
+
+        &:hover
+            &:not([disabled])
+                color: #fff
+                background: $red-hover
+
+        &:active
+            &:not([disabled])
+                background: $red
+    &.btn--turquoise
+        background: $status1
+        width: auto
+        color: #fff
+
+        &:hover
+            &:not([disabled])
+                color: #fff
+                background: $status1-hover
+
+        &:active
+            &:not([disabled])
+                background: $status1
+    &.btn--purple
+        background: $status3
+        width: auto
+        color: #fff
+
+        &:hover
+            &:not([disabled])
+                color: #fff
+                background: $status3-hover
+
+        &:active
+            &:not([disabled])
+                background: $status3
+    &.btn--violet
+        background: $status2
+        width: auto
+        color: #fff
+
+        &:hover
+            &:not([disabled])
+                color: #fff
+                background: $status2-hover
+
+        &:active
+            &:not([disabled])
+                background: $status2
+    &.btn--blue
+        background: $accent
+        width: auto
+        color: #fff
+
+        &:hover
+            &:not([disabled])
+                color: #fff
+                background: $accent-hover
+
+        &:active
+            &:not([disabled])
+                background: $accent

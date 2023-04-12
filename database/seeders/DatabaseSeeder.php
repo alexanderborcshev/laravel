@@ -49,17 +49,5 @@ class DatabaseSeeder extends Seeder
                 $sort += 100;
             }
         }
-        // User for sms log
-            \App\Models\User::factory()->create([
-                'name' => 'User Log',
-                'email' => 'log',
-                'password' => bcrypt('B]naqR25h@y[w$pD^XZ#'),
-            ]);
-//        Provider::factory(5)->create();
-//        Manager::factory(5)->create();
-//        Offer::factory(10)->create();
-//        Order::factory(30)->create();
-//        OrderEvent::factory(90)->create();
-        //OfferStatistic::factory(10)->create();
     }
 }
